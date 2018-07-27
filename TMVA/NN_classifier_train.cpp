@@ -1,4 +1,4 @@
-// c++  -g -o NN NN.cpp `root-config --libs --glibs --cflags` -lTMVA -lTMVAGui
+// c++  -g -o NN_classifier_train NN_classifier_train.cpp `root-config --libs --glibs --cflags` -lTMVA -lTMVAGui
 #include <iostream>
 #include <sstream>
 #include <string>
