@@ -48,8 +48,7 @@ int main (int argc, char ** argv)
 
 
   // Create a ROOT output file where TMVA will store ntuples, histograms, etc.
-  TString outfileName ("TMVA.root") ;
-  TFile * outputFile = TFile::Open (outfileName, "RECREATE") ;
+  TFile * outputFile = TFile::Open ("NN_classifier.root", "RECREATE") ;
 
   TMVA::Tools::Instance () ;
   TMVA::Factory * factory = new TMVA::Factory 
@@ -59,7 +58,8 @@ int main (int argc, char ** argv)
       "!V:!Silent:Color:DrawProgressBar:Transformations=I;D;P;G,D:AnalysisType=Classification" 
     ) ;
 
-  TMVA::DataLoader * dataloader = new TMVA::DataLoader ("dataset") ;
+  // the name "NN_classifier" is the one of the folder where the output will be saved
+  TMVA::DataLoader * dataloader = new TMVA::DataLoader ("NN_classifier") ;
 
   dataloader->AddVariable ("x", 'F') ;
   dataloader->AddVariable ("y", 'F') ;
