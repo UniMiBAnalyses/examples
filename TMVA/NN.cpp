@@ -95,6 +95,15 @@ int main (int argc, char ** argv)
   // Evaluate and compare performance of all configured MVAs
   factory->EvaluateAllMethods () ;
 
+  // Save the output
+  outputFile->Close () ;
+
+  delete factory ;
+  delete dataloader ;
+  delete signal ;
+  delete background ;
+  delete outputFile ;
+
   return 0 ;
 }
 
