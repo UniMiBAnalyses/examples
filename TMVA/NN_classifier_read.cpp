@@ -1,4 +1,4 @@
-// c++  -g -o NN_classifier_use NN_classifier_use.cpp `root-config --libs --glibs --cflags` -lTMVA -lTMVAGui
+// c++  -g -o NN_classifier_read NN_classifier_read.cpp `root-config --libs --glibs --cflags` -lTMVA -lTMVAGui
 #include <iostream>
 #include <sstream>
 #include <string>
@@ -94,8 +94,6 @@ int main (int argc, char ** argv)
   h_NN_background.Draw ("same") ;
   h_NN_signal.Draw ("same") ;
   c1.Print ("NN_distributions.pdf", "pdf") ;
-
-  
 
   delete reader ;
 
