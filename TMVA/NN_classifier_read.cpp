@@ -79,6 +79,7 @@ int main (int argc, char ** argv)
   outfile.cd () ;
   h_NN_signal.Write () ;
   h_NN_background.Write () ;
+  outfile.Close () ;
   
   //PG draw histograms
   h_NN_signal.SetLineWidth (2) ;
